@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>sample Task</title>
+        <style>
+            table, th, td 
+            {
+                border: 1px solid black;
+                text-align: center;
+            }
+            tr:nth-child(even){background-color: #f2f2f2}
+            .btn{
+                background-color: #4CAF50;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+            }
+            .image
+            {
+                border-radius: 50%;
+                height: 100px;
+                width: 100px;
+            }
+            .form
+            {
+                padding: 20px;
+                margin: 10px;
+                background: #ff0030;
+                color: #fff;
+                font-size: 21px;
+                font-weight: bold;
+                line-height: 1.3em;
+                border: 2px dashed #fff;
+                border-radius: 10px;
+                box-shadow: 0 0 0 4px #ff0030, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+                text-shadow: -1px -1px #aa3030;
+            }
+            h1
+            {
+                color: transparent;
+                text-shadow: #111 0 0 15px;
+                transition: 0.4s;
+            }
+            @import url('https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet');
+            p
+            {
+                font-family: 'Great Vibes', cursive;
+            }
+            p::first-letter
+            {
+                font-size: 200%;
+                color: #8A2BE2;
+            }
+            
+            a:link 
+            {
+                    color: #0e630f
+            }
+            a:hover
+            {
+                color: #ec8007
+            }
+            a:active 
+            {
+                color:#602206
+            }
+            a:visited
+            {
+                color:#4f628e
+            }
+            
+            a[target] 
+            {
+                background-color: yellow;
+            }
+            
+            a[target=_blank] 
+            {
+                background-color: yellow;
+            }
+            
+            div p 
+            {
+                background-color: yellow;
+            }
+            
+            div > p 
+            {
+                background-color: red;
+            }
+            
+            div + p
+            {
+                background-color: cornflowerblue;
+            }
+            ul 
+            {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                background: #1bc2a2;
+            }
+
+            ul li 
+            {
+                display: block;
+                position: relative;
+                float: left;
+                background: #1bc2a2;
+            }
+            
+            li ul { display: none; }
+
+            ul li a
+            {
+                display: block;
+                padding: 1em;
+                text-decoration: none;
+                white-space: nowrap;
+                color: #fff;
+            }
+
+            ul li a:hover 
+            { 
+                background: #2c3e50;
+            }
+        
+            li:hover > ul 
+            {
+                display: block;
+                position: absolute;
+            }
+
+            li:hover li 
+            {
+                float: none; 
+            }
+
+            li:hover a 
+            {
+                background: #1bc2a2;
+            }
+
+            li:hover li a:hover 
+            {
+                background: #2c3e50;
+            }
+
+            .main-navigation li ul li
+            {
+                border-top: 0;
+            }   
+            ul ul ul 
+            {
+                left: 100%;
+                top: 0;
+            }
+            ul:before, ul:after 
+            {
+                content: " "; 
+                display: table;
+            }
+
+            ul:after 
+            {
+                clear: both;
+            }
+            .box {
+  width: 200px; height: 300px;
+  position: relative;
+  border: 1px solid #BBB;
+  background: #EEE;
+}
+.ribbon {
+  position: absolute;
+  right: -5px; top: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 75px; height: 75px;
+  text-align: right;
+}
+.ribbon span {
+  font-size: 10px;
+  font-weight: bold;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  width: 100px;
+  display: block;
+  background: #79A70A;
+  background: linear-gradient(#9BC90D 0%, #79A70A 100%);
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 19px; right: -21px;
+}
+.ribbon span::before {
+  content: "";
+  position: absolute; left: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid #79A70A;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #79A70A;
+}
+.ribbon span::after {
+  content: "";
+  position: absolute; right: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid #79A70A;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #79A70A;
+}
+        </style>
+    </head>
+    <body>
+        <ul class="main-navigation">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Front End Design</a>
+    <ul>
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">CSS</a>
+        <ul>
+          <li><a href="#">Resets</a></li>
+          <li><a href="#">Grids</a></li>
+          <li><a href="#">Frameworks</a></li>
+        </ul>
+      </li>
+      <li><a href="#">JavaScript</a>
+        <ul>
+          <li><a href="#">Ajax</a></li>
+          <li><a href="#">jQuery</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#">WordPress Development</a>
+    <ul>
+      <li><a href="#">Themes</a></li>
+      <li><a href="#">Plugins</a></li>
+      <li><a href="#">Custom Post Types</a>
+        <ul>
+          <li><a href="#">Portfolios</a></li>
+          <li><a href="#">Testimonials</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Options</a></li>
+    </ul>
+  </li>
+  <li><a href="#">About Us</a></li>
+</ul>
+        <h2>
+        <p>This is task page</p>
+        </h2>
+        <img  class="image" src="http://dreamatico.com/data_images/desert/desert-1.jpg" alt="image">
+        <table style="width:100%">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>Doe</td>
+    <td>80</td>
+  </tr>
+</table>
+        <form>
+        <div class="form">
+            <label for="fname">LastName:</label><br>
+            <input type="fname" placeholder="fname" required><br>
+        </div>
+        <div class="form">
+            <label for="lname">FirstName:</label><br>
+            <input type="lname" placeholder="lname" required><br>
+        </div>
+        <div class="form">
+            <label for="email">E-mail</label><br>
+            <input type="e-mail" placeholder="email" required><br>
+        </div>
+        <button type="submit" class="btn btn-succcess">submit</button>&nbsp;
+        <button type="clear" class="btn btn-danger">Clear</button>
+        </form>
+        <h1>sample text for blur effect:</h1>
+        <p>sample code for google fonts</p><p>New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.</p>
+        <a href="http://www.google.com">This is a hyperlink</a>
+        <a href="https://www.w3schools.com">Link1</a>
+        <a href="http://www.disney.com" target="_blank">Link2</a>
+        <a href="http://www.wikipedia.org" target="_top">Link3</a>
+        <div>
+            <p>Paragraph 1 in the div.</p>
+            <p>Paragraph 2 in the div.</p>
+            <span><p>Paragraph 3 in the div.</p></span>
+        </div>
+        
+        <p>this is not in div tag</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/nPXfsewcPO8" frameborder="0" allowfullscreen></iframe>
+        
+        <table width="200" border="1">
+            <tr>
+                <th colspan="3">Hi welcome to world</th>
+            </tr>
+            <tr>
+                <td>Hi</td>
+                <td>Welcome</td>
+                <td>world</td>
+            </tr>
+            <tr>
+                <td rowspan="2">yes<br>i did it</td>
+                <td>top right</td>
+                <td rowspan="2">Hi<br>Hello World!</td>
+            </tr>
+            <tr>
+                <td>bottom right</td>
+            </tr>
+            <tr>
+                <td colspan="2">table creation</td>
+                <td>Done</td>
+            </tr>
+            <tr>
+                <td>We're.</td>
+                <td>still</td>
+                <td>here</td>
+            </tr>
+        </table> 
+        <br>
+        <div class="box">
+   <div class="ribbon"><span>POPULAR</span></div>
+</div>
+    </body>
+</html>
